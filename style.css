@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "cafe";
-    src: url(ASSETS/cafe.ttf) format("truetype");
+    font-family: "retro";
+    src: url(ASSETS/retro.ttf) format("truetype");
 }
 
 
@@ -8,18 +8,59 @@
 
 /* rock paper scissors */
 
+.body-RPS {
+    animation: slide 30s linear infinite;
+    background: url("ASSETS/frill.gif") repeat 0 0;
+}
+
+    @keyframes slide {
+        100% {
+            background-position: -500px -450px;
+        }
+    }
+
 .container-RPS {
+    border: 10px double #ff91ae;
     border-radius: 40px;
-    background-color: #fff08f;
-    margin: 9% 20% 0;
+    background: url("ASSETS/whitechoc2.gif");
+    margin: 3% 20% 0;
     padding: 3% 0 3%;
     align-items: center;
     text-align: center;
-    font-family: "cafe";
+    font-family: "retro";
+    font-size: 1.5em;
+    box-shadow: 0 10px 10px rgb(73, 73, 73);
+}
+
+.intro-RPS h1 {
+    color:#ff9fb9;
+    text-shadow: 0 2px 2px black;
+}
+
+.intro-RPS h3 {
+    color:#ffcad8;
+    text-shadow: 0 1px 1px black;
+    margin: 1% 5% 3%;
+}
+
+p {
+    color:#ff9fb9;
+}
+
+.game-RPS h4 {
+    color:#ffcad8;
+    text-shadow: 0 1px 1px black;
+
+}
+
+.game-RPS h5 {
+    color:#ff9fb9;
+    text-shadow: 0 1.5px 1.5px black;
+
 }
 
 button {
-    border: none;
+    border: 3px double #ff9fb9;
     margin: 0;
     transition: .3s;
     width: 25%;
@@ -32,11 +73,11 @@ button {
     button img {
     background: none;
     padding: 10px;
-
-    width: 20%;
+    width: 30%;
     transition: 0.3s;
     }
 
     button:hover {
         background-color: #ff9fb9;
     }
+
