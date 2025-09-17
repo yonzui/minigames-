@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "cafe";
+    src: url(ASSETS/cafe.ttf) format("truetype");
+}
+
+
+
+
+/* rock paper scissors */
+
+.container-RPS {
+    border-radius: 40px;
+    background-color: #fff08f;
+    margin: 9% 20% 0;
+    padding: 3% 0 3%;
+    align-items: center;
+    text-align: center;
+    font-family: "cafe";
+}
+
+button {
+    border: none;
+    margin: 0;
+    transition: .3s;
+    width: 25%;
+    height: auto;
+    display: inline;
+    border-radius: 100px;
+    background-color: #ffd9e3;
+}
+
+    button img {
+    background: none;
+    padding: 10px;
+
+    width: 20%;
+    transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #ff9fb9;
+    }
