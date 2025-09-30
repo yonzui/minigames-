@@ -79,7 +79,7 @@ const scoreText = document.querySelector("#scoreText");
 const resetBtnPong = document.querySelector("#resetBtnPong")
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;
-const boardBackground = "pink";
+const boardBackground = "white";
 const paddle1Color = "white";
 const paddle2Color = "white";
 const paddleBorder = "black";
@@ -268,3 +268,19 @@ function resetGame(){
 };
 
 // PONG END
+
+
+
+
+
+// MG START
+
+const emojis = ["🍰","🍰","🪻","🪻","🪼","🪼","✨","✨","💞","💞",
+"🐒","🐒","🌾","🌾","🍀","🍀","🍬","🍬","🪅","🪅"];
+var shuf_emojis = emojis.sort(() => (Math.random() > .5) ? 2 : -1);
+for ( var i =0; i<emojis.length; i++){
+    let box = document.createElement('div')
+    box.className = 'item';
+    box.innerHTML = shuf_emojis[i]
+    document.querySelector('.memoryGame').appendChild(box);
+};
