@@ -3,10 +3,47 @@
     src: url(ASSETS/retro.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "cafe";
+    src: url(ASSETS/cafe.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "rainy";
+    src: url(ASSETS/Minecraft.ttf) format("truetype");
+}
 
 
 
-/* rock paper scissors */
+#GL {
+    background-image: url("ASSETS/glitchPolka.gif");
+    background-color: rgb(238, 233, 217);
+}
+
+
+
+.theGames {
+    margin: 8% 40% 0;
+    padding: 80px;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(205, 194, 180);
+    border: 2px solid rgb(153, 132, 106);
+}
+
+.listedGames button, .listedGames a {
+    color: black;
+    margin-bottom: 10px;
+    text-decoration: none;
+    background: rgb(153, 132, 106);
+    border: none;
+    line-height: 30px;
+}
+
+    .listedGames button:hover {
+        box-shadow: 1px 1px 3px rgb(52, 52, 52);
+    }
+/* RPS START */
 
 .body-RPS {
     animation: slide 30s linear infinite;
@@ -23,7 +60,7 @@
     border: 10px double #ff91ae;
     border-radius: 40px;
     background: url("ASSETS/whitechoc2.gif");
-    margin: 3% 20% 0;
+    margin: 1% 20% 4%;
     padding: 3% 0 3%;
     align-items: center;
     text-align: center;
@@ -59,7 +96,7 @@ p {
 
 }
 
-button {
+.rockB, .paperB, .scissorsB {
     border: 3px double #ff9fb9;
     margin: 0;
     transition: .3s;
@@ -70,14 +107,82 @@ button {
     background-color: #ffd9e3;
 }
 
-    button img {
+.rockB img, .paperB img, .scissorsB img {
     background: none;
     padding: 10px;
     width: 30%;
     transition: 0.3s;
     }
 
-    button:hover {
+.rockB:hover, .paperB:hover, .scissorsB:hover {
         background-color: #ff9fb9;
     }
 
+
+
+#returnHomeRPS {
+    font-family: "retro";
+    background-color: white;
+    border: 2px solid #ff91ae;
+}
+
+#returnHomeRPS a {
+    text-decoration: none;
+    color: #ff91ae;
+}
+
+    #returnHomeRPS:hover, #returnHomeRPS a:hover {
+    background-color: #ff91ae;
+    color:white;
+}
+/* RPS END */
+
+
+
+
+
+/* PONG START */
+
+#bodyPONG {
+    background: url("ASSETS/bluePolka.gif") repeat 0 0;
+}
+
+#container-PONG {
+    margin-top: 2%;
+    text-align: center;
+    align-items: center;
+}
+
+#gameBoard {
+    border: 3px solid;
+}
+
+#scoreText {
+    font-family: "rainy";
+    font-size: 100px;
+}
+
+#resetBtnPong {
+    font-family: "cafe";
+    cursor: pointer;
+}
+
+#returnHomePong a {
+    font-family: "cafe";
+    cursor: pointer;
+    text-decoration: none;
+    color:black;   
+}
+
+#resetBtnPong, #returnHomePong {
+    background-color:white;
+}
+
+.PONGborder {
+    margin: 0 32% 0;
+    background-color: rgb(198, 228, 228);
+    padding: 1% 0 1%;
+
+}
+
+/* PONG END */
