@@ -1,71 +1,60 @@
 // ROCK-PAPER-SCISSORS
-const computerChoiceDisplay = document.getElementById('computer-choice');
-const userChoiceDisplay = document.getElementById('user-choice');
-const resultDisplay = document.getElementById('result');
-const possibleChoices = document.querySelectorAll('button');
-let userChoice
-let computerChoice
-let result
-
-possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
-    userChoice = e.target.id    
-    userChoiceDisplay.innerHTML = userChoice
-    generateComputerChoice()
-    getResult()
-}))
-
-function generateComputerChoice() {
-    const randomNumber = Math.floor(Math.random() * 3)
+const gameContainer = document.querySelector(".container"),
+userResult = document.querySelector(".user_result img"),
+cpuResult = document.querySelector(".cpu_result img"),
+result = document.querySelector(".result"),
+optionImages = document.querySelectorAll(".option_image");
 
 
-    if (randomNumber === 1) {
-        computerChoice = 'rock'
-    }
-
-    if (randomNumber === 2) {
-        computerChoice = 'scissors'
-    }
-
-    if (randomNumber === 3) {
-        computerChoice = 'paper'
-    }
-
-    computerChoiceDisplay.innerHTML = computerChoice
-}
-
-function getResult() {
-    if (computerChoice === userChoice) {
-        result = 'draw!'
-    }
-
-        if (computerChoice === 'rock' && userChoice === 'paper') {
-        result = 'you win!'
-    }
-
-            if (computerChoice === 'rock' && userChoice === 'scissors') {
-        result = 'you lost...'
-    }
+optionImages.forEach((image, index) => {
+    image.addEventListener("click", (e) => {
+        image.classList.add("active");
 
 
-            if (computerChoice === 'paper' && userChoice === 'scissors') {
-        result = 'you win!'
-    }
+        optionImages.forEach ((image2, index2) => {
 
-            if (computerChoice === 'paper' && userChoice === 'rock') {
-        result = 'you lost...'
-    }
+            
+            index !== index2 && image2.classList.remove("active");
+        });
 
-            if (computerChoice === 'scissors' && userChoice === 'rock') {
-        result = 'you win!'
-    }
+        
+        let imageSrc = e.target.querySelector("img").src;
 
-            if (computerChoice === 'scissors' && userChoice === 'paper') {
-        result = 'you lost...'
-    }
+        userResult.src = imageSrc;
 
-    resultDisplay.innerHTML = result
-}
+        
+        let randomNumber = Math.floor(Math.random() * 3);
+
+        let cpuImages = ["ASSETS/images/rock.png", "ASSETS/images/paper.png", "ASSETS/images/scissors.png"];
+        cpuResult.src = cpuImages[randomNumber];
+
+
+
+        let cpuValue = ["R", "P", "S"][randomNumber];
+        
+        let userValue = ["R", "P", "S"][index];
+
+        console.log(cpuValue, userValue)
+
+    });
+});
+
+
+
+
+
 // RPS END
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -275,12 +264,3 @@ function resetGame(){
 
 // MG START
 
-const emojis = ["🍰","🍰","🪻","🪻","🪼","🪼","✨","✨","💞","💞",
-"🐒","🐒","🌾","🌾","🍀","🍀","🍬","🍬","🪅","🪅"];
-var shuf_emojis = emojis.sort(() => (Math.random() > .5) ? 2 : -1);
-for ( var i =0; i<emojis.length; i++){
-    let box = document.createElement('div')
-    box.className = 'item';
-    box.innerHTML = shuf_emojis[i]
-    document.querySelector('.memoryGame').appendChild(box);
-};
