@@ -10,6 +10,9 @@ optionImages.forEach((image, index) => {
     image.addEventListener("click", (e) => {
         image.classList.add("active");
 
+        userResult.src = cpuResult.src = "ASSETS/images/rock.png"
+        result.textContent = "wait..."
+
 
         optionImages.forEach ((image2, index2) => {
 
@@ -17,7 +20,12 @@ optionImages.forEach((image, index) => {
             index !== index2 && image2.classList.remove("active");
         });
 
+        gameContainer.classList.add("start");
+
         
+        let time = setTimeout(() =>{
+            gameContainer.classList.remove("start");
+
         let imageSrc = e.target.querySelector("img").src;
 
         userResult.src = imageSrc;
@@ -34,7 +42,26 @@ optionImages.forEach((image, index) => {
         
         let userValue = ["R", "P", "S"][index];
 
-        console.log(cpuValue, userValue)
+
+      let outcomes = {
+        RR: "draw",
+        RP: "computer",
+        RS: "you",
+        PP: "draw!",
+        PR: "you",
+        PS: "computer",
+        SS: "draw",
+        SR: "computer",
+        SP: "you",
+      };
+      
+      
+      let outComeValue = outcomes[userValue + cpuValue];
+
+      result.textContent = userValue === cpuValue ? "match draw..." : `${outComeValue} won!`
+      console.log(outComeValue);
+      
+        },2500)
 
     });
 });
