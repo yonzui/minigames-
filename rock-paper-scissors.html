@@ -7,41 +7,43 @@
 </head>
 <body class="body-RPS">
 
-    <div class="container-RPS">
+        <section class="container">
 
-        <div class="intro-RPS">
-            <h1>rock, paper scissors!</h1>
-            <h3>click the rock, paper, or scissors and see if you win!</h3>
-        </div>
+            <div class="result_field">
+                <div class="result_images">
+                    <span class="user_result">
+                        <img src="ASSETS/images/rock.png">
+                    </span>
+                    <span class="cpu_result">
+                        <img src="ASSETS/images/rock.png">
+                    </span>
 
-        <div class="game-RPS">
+                </div>
+
+                <div class="result">lets play!</div>
+
+            </div>
+            
+            <div class="option_images">
+                <span class="option_image">
+                    <img src="ASSETS/images/rock.png">
+                    <p>rock</p>
+                </span>
+                <span class="option_image">
+                    <img src="ASSETS/images/paper.png">
+                    <p>paper</p>
+                </span>
+                <span class="option_image">
+                    <img src="ASSETS/images/scissors.png">
+                    <p>scissors</p>
+                </span>
+            </div>
+
+        </section>
 
 
-            <button id="rock" class="rockB">
-                <img src="ASSETS\rock.png">
-            </button>
 
-            <button id="paper" class="paperB">
-                <img src="ASSETS\paper.png">
-            </button>
-
-            <button id="scissors" class="scissorsB">
-                <img src="ASSETS\scissors.png">
-            </button>
-        
-            <h4>computer: <span id="computer-choice"></span></h4>
-            <h4>you: <span id="user-choice"></span></h4>
-            <h5>result: <span id="result"></span></h4>
-
-        <button id="returnHomeRPS">
-            <a href="allGames.html">home</a>
-        </button>
-
-        </div>
-
-    </div>
-
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </body>
 </html>
