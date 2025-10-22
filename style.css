@@ -259,3 +259,18 @@
 }
 
 /* PONG END */
+
+
+
+
+
+
+
+/* MG START */
+
+#grid {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
