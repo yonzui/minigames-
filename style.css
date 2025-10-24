@@ -273,4 +273,33 @@
     height: 300px;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 8%;
+
+    border: 3px solid;
 }
+
+#bodyMG {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+}
+
+    #bodyMG h3 {
+        display: flex;
+        position: absolute;
+        top: 10%;
+        font-family: "cafe";
+
+    }
+
+    #bodyMG button {
+        margin-left: 200px;
+        background-color: white;
+        font-family: "cafe";
+    }
+
+        #bodyMG a {
+                text-decoration: none;
+                color: black;
+        }
