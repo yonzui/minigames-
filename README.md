@@ -1,5 +1,5 @@
 # about
-i developed a a minigame website, with rock paper scissors, a memory game, and pong! i thought it would be fun to practice some javascript through game dev. i also used html and css, and made this in vscode! this was made apart of hack club's athena award.
+i developed a a minigame website, with rock paper scissors, a memory game, and pong! i thought it would be fun to practice some javascript through game dev. i also used html and css, and made this in vscode! this was made apart of hack club's athena award.[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
 
 # how to play
 rock, paper, scissors: click on the rock, paper, or scissor symbol to play against a computer.
